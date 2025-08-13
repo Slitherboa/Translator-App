@@ -1,5 +1,4 @@
-# Translator
-
+# Translator Application 
 Simple Translator Web App built with React + Vite.
 
 ## Scripts
