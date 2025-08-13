@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Translator Application 
 Simple Translator Web App built with React + Vite.
 
@@ -53,4 +54,6 @@ The frontend calls `/api/translate` (proxied to the backend in dev). If the back
 - Recent translations are saved in `localStorage`.
 - Text-to-Speech uses the Web Speech API when available.
 
+=======
+>>>>>>> fa649d602aed79809de5a8452657bb1a804985cd
 
