@@ -110,8 +110,12 @@ app.post('/translate', async (req, res) => {
 
     res.json({ translation, provider })
   } catch (err) {
+    // Try to propagate upstream status codes like 401/403/429 to the client
+    const status = err?.status || err?.response?.status || 500
     const message = err?.message || 'Unknown error'
-    res.status(500).json({ error: message })
+    // eslint-disable-next-line no-console
+    console.error('Translate error:', status, message)
+    res.status(status).json({ error: message })
   }
 })
 
